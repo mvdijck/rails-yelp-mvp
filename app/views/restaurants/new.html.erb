@@ -1,0 +1,19 @@
+<h3>Add a new restaurant</h3>
+
+<%= simple_form_for(@restaurant) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name, placeholder:"Insert name" %>
+
+<%= f.label :address %>
+<%= f.text_field :address, placeholder:"Insert address" %>
+
+<%= f.label :phone_number %>
+<%= f.text_field :phone_number, placeholder:"Insert phone_number nr" %>
+
+<%= f.label :category %>
+<%= f.select :category, @category %>
+
+<%= f.submit %>
+<% end %>
+
+<%= link_to 'All restaurants', restaurants_path %>
